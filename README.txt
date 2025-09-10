@@ -1,6 +1,6 @@
 Project Info
 
-Assignment: CSCI 363/540 – Assignment 1: CSV ETL Pipeline in Java
+Assignment: CSCI 363/540 – Assignment 2: CSV ETL Pipeline in Java
 Student: Sam-Joel Blankson
 File Structure:
 

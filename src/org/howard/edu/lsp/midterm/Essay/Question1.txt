@@ -1,0 +1,19 @@
+Question 1 – StudentPortalHelper Cohesion Analysis
+
+a) Should a well-designed class have high or low cohesion?
+A well-designed class should have high cohesion. High cohesion means that all methods and fields are focused on a single responsibility. This improves readability, maintainability, and reusability. Low cohesion, where a class does many unrelated tasks, makes the code harder to understand and modify.
+
+b) Cohesion analysis and redesign
+The StudentPortalHelper class currently has low cohesion. It contains methods for GPA calculation, CSV export, email formatting, date formatting, tuition payment, password validation, and caching. These responsibilities are unrelated, so the class is doing too much.
+
+Refactoring approach:
+1. Split the class into multiple classes, each with a single responsibility:
+   - GpaCalculator -> computeGPA
+   - RosterExporter -> exportRosterToCsv
+   - EmailService -> makeWelcomeEmail
+   - DateFormatter -> formatDateForUi
+   - PaymentProcessor -> processTuitionPayment
+   - PasswordValidator -> isStrongPassword
+   - CacheManager -> putCache / getCache
+2. Organize these classes into appropriate packages.
+3. Result: each class now has high cohesion, is easier to maintain and test, and avoids being a “God class.”

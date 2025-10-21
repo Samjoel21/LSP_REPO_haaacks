@@ -1,0 +1,5 @@
+Question 5 – Reflection on AI Use in Learning and Problem Solving
+
+Before this course, I occasionally used AI tools such as ChatGPT and GitHub Copilot to help me understand programming concepts and debug small snippets of code. During this course, I used AI more systematically to clarify difficult topics, generate example code, and check my logic. For instance, when working on complex inheritance or interface problems, I asked AI to provide step-by-step explanations that helped me understand the design patterns and best practices.  
+
+The main benefits I encountered were time savings, immediate explanations, and guidance on structuring my code properly. Limitations included occasional inaccuracies or missing context, which required me to double-check the AI’s suggestions. Looking ahead, I expect AI to continue being a powerful support tool for academic and professional problem-solving, as long as I combine its guidance with critical thinking and personal verification. It allows me to prototype ideas faster, learn new concepts efficiently, and improve the quality of my code while maintaining responsibility for correctness.

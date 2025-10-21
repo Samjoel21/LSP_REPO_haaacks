@@ -1,0 +1,51 @@
+Question 3 – Car Trim Level Flexibility Analysis
+
+a) Does the current structure support dynamic trim-level changes?
+The current Car class design does not support changing trim levels dynamically. If trim level is stored as a fixed field or implemented via subclasses (e.g., BaseCar, LuxuryCar, SportCar), changing the trim would require creating a new Car object. Therefore, the current design is rigid and cannot handle runtime trim-level modifications requested by customers during the manufacturing process.
+
+b) Refactor to allow dynamic trim-level changes using composition
+Step 1: Define a TrimLevel interface
+
+public interface TrimLevel {
+    String getName();
+    double getPriceMultiplier(); // optional
+}
+
+Implement concrete trim classes:
+
+public class BaseTrim implements TrimLevel {
+    public String getName() { return "Base"; }
+}
+
+public class LuxuryTrim implements TrimLevel {
+    public String getName() { return "Luxury"; }
+}
+
+public class SportTrim implements TrimLevel {
+    public String getName() { return "Sport"; }
+}
+
+Step 2: Modify Car to use composition
+
+public class Car {
+    private TrimLevel trim;    // Car "has a" TrimLevel
+    private EngineType engine; // electric or petrol
+
+    public Car(TrimLevel trim, EngineType engine) {
+        this.trim = trim;
+        this.engine = engine;
+    }
+
+    public void setTrim(TrimLevel newTrim) { // Allows dynamic change
+        this.trim = newTrim;
+    }
+
+    public TrimLevel getTrim() {
+        return trim;
+    }
+}
+
+Step 3: Benefits
+- Trim level can now change at runtime without creating a new Car object.
+- Follows composition over inheritance, making design flexible.
+- Car class remains simple and cohesive, while supporting dynamic behavior.
